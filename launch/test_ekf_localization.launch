@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization1">
+        <rosparam command="load" file="$(find project2)/config/param1.yaml" />
+        <remap from="/odometry/filtered" to="odom1"/>
+    </node>
+    <!-- <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization2">
+        <rosparam command="load" file="$(find project2)/config/param2.yaml" />
+        <remap from="/odometry/filtered" to="odom2"/>
+    </node>
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization3">
+        <rosparam command="load" file="$(find project2)/config/param3.yaml" />
+        <remap from="/odometry/filtered" to="odom3"/>
+    </node> -->
+
+</launch>

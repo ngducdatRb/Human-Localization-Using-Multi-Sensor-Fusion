@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="project2" type="fake_position.py" name="fake_position">
+        
+    </node>
+
+</launch>

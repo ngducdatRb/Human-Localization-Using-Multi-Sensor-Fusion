@@ -1,0 +1,4 @@
+std_msgs/Header human_header
+geometry_msgs/Pose human_location
+geometry_msgs/Pose camera_location
+geometry_msgs/Pose lidar_location

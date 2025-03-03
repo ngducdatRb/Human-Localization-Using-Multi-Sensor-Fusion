@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="project2" type="manage_human.py" name="manage_human">
+
+    </node>
+
+</launch>

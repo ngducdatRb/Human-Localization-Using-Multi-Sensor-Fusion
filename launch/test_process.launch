@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="project2" type="process_camera.py" name="camera_processor_node" />
+
+    <node pkg="project2" type="process_lidar.py" name="lidar_processor_node" /> 
+
+    <node pkg="project2" type="manage_human.py" name="manage_human_node" />
+
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization1">
+        <rosparam command="load" file="$(find project2)/config/param1.yaml" />
+        <remap from="/odometry/filtered" to="odom1"/>
+    </node>
+
+    <!-- <node pkg="project2" type="process_tf.py" name="process_tf"/> -->
+
+</launch>

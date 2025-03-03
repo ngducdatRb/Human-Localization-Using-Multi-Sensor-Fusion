@@ -1,0 +1,22 @@
+<launch>
+    <param name="robot_description"
+      command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_waffle_pi.urdf.xacro" />
+  
+    <!-- BEGIN ROBOT 1-->
+    <group ns="robot_1">
+      <param name="tf_prefix" value="robot1_tf" />
+      <include file="$(find project2)/launch/one_robot.launch" >
+        <arg name="init_pose" value="-x 0 -y 0 -z 0" />
+        <arg name="robot_name"  value="Robot1" />
+      </include>
+    </group>
+  
+    <!-- BEGIN ROBOT 2-->
+    <!-- <group ns="robot_2">
+      <param name="tf_prefix" value="robot2_tf" />
+      <include file="$(find multi_robot_test)/launch/one_robot.launch" >
+        <arg name="init_pose" value="-x 2 -y 1 -z 0" />
+        <arg name="robot_name"  value="Robot2" />
+      </include>
+    </group> -->
+  </launch>
